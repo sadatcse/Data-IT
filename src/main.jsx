@@ -11,7 +11,8 @@ import Root from './pages/default/Root';
 import Error404 from './pages/default/Error404';
 import Home from './/pages/Pages/Home';
 
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const router = createBrowserRouter([
   {
