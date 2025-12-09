@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* |--------------------------------------------------------------------------
+| Global/Root Styles
+|--------------------------------------------------------------------------
+*/
+#root {
+  @apply max-w-[1660px] mx-auto ;
+}
+
+
+/* |--------------------------------------------------------------------------
+| Custom Components using @apply 
+|--------------------------------------------------------------------------
+*/
+
+/* * .font-title: Custom typeface application. */
+.font-title {
+  font-family: 'Alfa Slab One', sans-serif;
+}
+
+/* * .dot: A simple styled bullet point. */
+.dot {
+  @apply inline-block w-2 h-2 bg-black rounded-full mr-2; 
+}
+
+/* * .dot2: A list item style - REPLACED 'list-square' with 'list-disc' */
+.dot2 {
+  @apply list-disc ml-3; 
+}
+
+
+/* * .video-container: Ensures videos maintain a 16:9 aspect ratio and scale responsively. */
+.video-container {
+  @apply relative w-full;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+}
+
+.video-container iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
