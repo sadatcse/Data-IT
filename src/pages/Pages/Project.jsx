@@ -53,6 +53,7 @@ const Project = () => {
                         className="w-full h-auto object-cover rounded-lg shadow-lg"
                     /> 
                 </div>
+                <div></div>
 
                 {/* 2. Text Content */}
                 <div className="text-center max-w-4xl mx-auto">
@@ -76,7 +77,7 @@ const Project = () => {
                     </div>
 
                 </div>
-            </div>
+            </div> 
         </section>
     );
 };
