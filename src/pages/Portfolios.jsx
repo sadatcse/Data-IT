@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import { FaArrowRight, FaLayerGroup } from 'react-icons/fa'; // Icons for visual flair
-import usePortfolioData from '../../hooks/usePortfolio';
+import usePortfolioData from '../hooks/usePortfolio';
 
 const Portfolios = () => {
   // We generally don't need 'id' for the full list, but keeping it if you have specific filtering logic later

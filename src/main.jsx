@@ -9,16 +9,18 @@ import {
 
 import Root from './pages/default/Root';
 import Error404 from './pages/default/Error404';
-import Home from './/pages/Pages/Home';
+
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import Portfolios from './pages/Pages/Portfolios';
-import ContactUs from './pages/Pages/ContactUs';
-import Blog from './pages/Pages/Blog';
-import AboutUs from './pages/Pages/AboutUs';
-import Careers from './pages/Pages/Careers';
-import Project from './pages/Pages/project';
+import Home from './pages/Home';
+import Portfolios from './pages/Portfolios';
+import ContactUs from './pages/ContactUs';
+import Blog from './pages/Blog';
+import AboutUs from './pages/AboutUs';
+import Careers from './pages/Careers';
+import Project from './pages/Project';
+
 
 
 const router = createBrowserRouter([

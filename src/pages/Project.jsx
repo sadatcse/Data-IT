@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import usePortfolioData from '../../hooks/usePortfolio'; // Adjust path if needed
+import usePortfolioData from '../hooks/usePortfolio'; // Adjust path if needed
 
 const Project = () => {
     // 1. Get the URL slug
