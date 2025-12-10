@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 import { HiOutlineMapPin } from 'react-icons/hi2';
-// Assuming the path to your Hero1.jpg is correct:
-import HeroImage from '../../assets/contact-Hero-Image-1.jpg'; 
+
+import HeroImage from '../assets/contact-Hero-Image-1.jpg'; 
 
 const ContactUs = () => {
     const [formData, setFormData] = useState({
