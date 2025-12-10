@@ -1,0 +1,72 @@
+[
+  {
+    "Serial": 1,
+    "name": "Zemaas",
+    "description": "We have developed multiple ZeMaas apps & website for Mobility service, Food delivery, Logistics, etc. In the Mobility service platform users can book taxi riders. Drivers can register and accept rides. Users can mark favorite locations, give tips to drivers and report any issues. Furthermore, the platform also provides a seamless food delivery experience for restaurant businesses & their customers enabling restaurant owners to register, add details about their restaurants, get online food orders, and manage them – while customers and restaurant owners can track the driver’s live location. We have also developed an extensive Admin panel for all these services with detailed user analytics, driver analytics and tracking, operator management, accounting, etc.",
+    "image_name": "Zemaas.png",
+    "url_title": "zemaas"
+  },
+  {
+    "Serial": 2,
+    "name": "Dubai Calendar",
+    "description": "Our team successfully developed a Dubai Calendar app for the Dubai Government. This calendar app displays the dates for various festivals, events, functions, and celebrations so that people from all over the world can come to visit Dubai and take part in the festivities. We have also incorporated a screen in the app that displays the real-time number of visitors to Dubai. This was done with the help of an API integrated from the Dubai Tourism Department. Additionally, the app is regularly updated to keep up with the changing events in Dubai. The app is helping the Dubai tourism sector to increase its reach and maximize its revenue.",
+    "image_name": "Dubai_Calendar.png",
+    "url_title": "dubaicalendar"
+  },
+  {
+    "Serial": 3,
+    "name": "Chefs Special Restaurant",
+    "description": "We have developed a comprehensive digital presence for Chefs Special Restaurant, a platform focused on showcasing their premium dining experience. The website acts as a central hub for customer engagement, offering a detailed, easy-to-navigate interface for potential patrons. Key features include an interactive digital menu, high-quality visuals of their cuisine, and a dedicated section for customer reviews and testimonials to build trust and credibility. The platform is engineered to facilitate easy user access to essential information like opening hours, location, and direct contact details. Crucially, we have integrated a seamless, third-party platform for online table reservations and booking management, allowing the restaurant to efficiently manage capacity and maximize seating turnover, directly contributing to increased revenue and customer convenience.",
+    "image_name": "Chefs_Special_Restaurant.png",
+    "url_title": "chefsspecialrestaurant"
+  },
+  {
+    "Serial": 4,
+    "name": "Little Bytes",
+    "description": "Our team delivered a robust, modern website for Little Bytes, positioning them as a comprehensive digital and print solutions provider. The platform is designed to showcase their core service offerings, which include Offset Printing Service, Digital Marketing, and Website Design. Crucially, in their Website Design offering, they provide essential support for clients with Domain, Hosting & Design, acting as a single point of contact for establishing a client's online presence. The site is structured to drive lead generation through easily accessible contact forms and a clear call-to-action (CTA) for requesting consultation. By integrating these diverse services, the website establishes Little Bytes' expertise in providing end-to-end solutions that make their clients' businesses easier, from initial website development and hosting to effective digital promotion and high-quality print production.",
+    "image_name": "Little_Bytes.png",
+    "url_title": "littlebytes"
+  },
+  {
+    "Serial": 5,
+    "name": "Multi Gym Premium",
+    "description": "We successfully developed a state-of-the-art website for Multi Gym Premium, a leading fitness center. The platform is designed to be a compelling marketing tool and an informative resource for new and existing members. Key functionalities include a detailed breakdown of all available amenities, such as free weights, cardio equipment, and steam/sauna facilities. The site features a comprehensive schedule and description of various fitness programs, including Body Building, Jummba, and Personal Training, encouraging higher participation. A clear and simple section for membership pricing and plan comparison is included to streamline the enrollment process. Testimonials and a news/events section are integrated to foster a strong community feel and showcase the gym's vibrant atmosphere and member achievements.",
+    "image_name": "Multi_Gym_Premium.png",
+    "url_title": "multigympremium"
+  },
+  {
+    "Serial": 6,
+    "name": "Multi Sports BD",
+    "description": "Our team created a dynamic and engaging e-commerce platform for Multi Sports BD, specializing in sports equipment and apparel. The website is built on a scalable e-commerce framework that provides an intuitive shopping experience for customers, featuring multi-category product listings and advanced filtering options. Core features include a secure shopping cart, multiple payment gateway integrations, and a robust user account system that allows customers to track orders, manage their purchase history, and save favorite items. The platform is designed to handle high traffic and a large product catalog, ensuring a smooth customer journey from browsing to checkout, maximizing sales conversions for the sports retailer.",
+    "image_name": "Multi_Sports_BD.png",
+    "url_title": "multisportsbd"
+  },
+  {
+    "Serial": 7,
+    "name": "Resilient Slope",
+    "description": "We successfully developed a highly professional and informative website for Resilient Slope, positioning the firm as a specialist in Sustainable and Climate Resilient Slope Stabilization. The platform clearly articulates their sophisticated engineering and testing capabilities across three key service domains: Design-Build Services of Landslide Investigation and Repair, including the use of Recycled Plastic Pin technology and Vetiver Grass for erosion control. Design and Analysis of Slopes, Embankment, Levees, and Earth Retaining Systems using the Limit Equilibrium and Finite Element Technique. Non-Destructive and Geophysical Testing, featuring techniques like Electrical Resistivity Imaging, Ground Penetration Radar, LiDAR Imaging, and Drone Imaging.",
+    "image_name": "Resilient_Slope.png",
+    "url_title": "resilientslope"
+  },
+  {
+    "Serial": 8,
+    "name": "Sara Lifestyle",
+    "description": "Our team built a visually rich and user-friendly e-commerce website for Sara Lifestyle, a business focused on home decor and lifestyle products. The platform is designed with a strong focus on aesthetics and product presentation, using high-resolution imagery to showcase their range of elegant items. The site features a sophisticated product categorization system, making it easy for customers to browse by room or product type. To enhance the customer experience and drive sales, we integrated features like product reviews, a streamlined checkout process, and mobile responsiveness, ensuring a consistent and pleasant shopping experience across all devices and maximizing impulse purchases.",
+    "image_name": "Sara_Lifestyle.png",
+    "url_title": "saralifestyle"
+  },
+  {
+    "Serial": 9,
+    "name": "Teaxo BD",
+    "description": "We developed a dynamic food ordering and delivery website for Teaxo BD (Teaxo), positioning it as a comprehensive food and beverage platform. Built using React to ensure a fast, modern, and responsive user experience, the website facilitates seamless online ordering. The platform offers a diverse menu that goes beyond just tea and coffee to include a wide range of popular dishes like Set Menus, Chicken Wings, Burgers, Pizzas, Pastas, and various platters. Key features include an organized digital menu, easy-to-use checkout functionality, and a seamless connection to popular delivery services to ensure efficient and reliable service for a wide range of popular local and international dishes.",
+    "image_name": "Teaxo_BD.png",
+    "url_title": "teaxobd"
+  },
+  {
+    "Serial": 10,
+    "name": "White Cloud BD",
+    "description": "We successfully developed a specialized e-commerce platform for White Cloud BD, positioning it as Bangladesh's No. 1 Men's Grooming Platform. The website is a one-stop destination committed to providing only carefully selected, high-quality, and authentic grooming solutions that work for men, free from hype. The platform features an extensive catalog that covers every product a man needs. Key e-commerce functionalities include: A broad range of product categories, including Hair Care, Skin Care, Beard Care, Hair Styler, Supplements, and Fragrances. Specific solutions for needs such as Hair & Beard Growth and Skin Care. A commitment to providing 100% authentic and effective premium products from trusted local and international brands.",
+    "image_name": "White_Cloud_BD.png",
+    "url_title": "whitecloudbd"
+  }
+]

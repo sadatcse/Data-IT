@@ -23,7 +23,7 @@ const StatCard = ({ number, label, accentClass }) => (
 const Choice = () => {
     return (
         // Main Container: Using a subtle gray background to match the screenshots' hue
-        <section className="bg-gray-50 py-16 md:py-24 relative overflow-hidden">
+        <section className="bg-white-50 py-16 md:py-24 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* --- 1. Top Section: Headline, Text, Image --- */}
