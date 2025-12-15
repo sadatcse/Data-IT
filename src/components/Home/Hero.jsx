@@ -4,7 +4,7 @@ import { Lightbulb, Award, BarChart2 } from 'lucide-react'; // Icons for the fea
 
 // Assuming the image you uploaded is saved as '../../assets/HeroImage.jpg'
 // I've renamed the import for clarity, but you should use your actual file path.
-import HeroImage from '../../assets/Hero1.jpg'; 
+import HeroImage from '../../assets/Hero1.png'; 
 
 // --- Helper Component: FeatureCard ---
 const FeatureCard = ({ icon: Icon, title, description }) => (
@@ -14,10 +14,10 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
       {/* Dynamic Icon */}
       <Icon className="w-8 h-8" /> 
     </div>
-    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+    <h3 className="text-xl font-semibold text-black mb-2">
       {title}
     </h3>
-    <p className="text-sm text-gray-600">
+    <p className="text-sm text-gray-dark">
       {description}
     </p>
   </div>
@@ -33,13 +33,13 @@ const HeroContent = () => (
     </h1>
     
     {/* Subtitle/Tagline */}
-    <p className="text-xl text-black-200 mb-8 max-w-xl">
+    <p className="text-xl text-gray-dark mb-8 max-w-xl">
       We work for your data and help improve your business.
     </p>
     
     {/* Call to Action Button */}
     {/* Uses 'btn' and 'btn-primary' classes from daisyUI */}
-    <button className="btn btn-lg btn-primary shadow-lg shadow-primary/50 normal-case text-base tracking-wide">
+    <button className="btn btn-lg btn-primary bg-sky-500 hover:bg-sky-600 shadow-lg shadow-primary/50 normal-case text-base tracking-wide">
       Request Consultation
     </button>
   </div>
@@ -78,10 +78,10 @@ const Hero = () => {
         />
         
         {/* Grayscale/Blue Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-gray-800 opacity-60"></div>
+        <div className="absolute inset-0 bg-navy-dark opacity-60"></div>
         
         {/* Gradient Fade (matches the original image) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-50/90 via-gray-50/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/10 to-transparent"></div>
 
 
         {/* 2. Hero Content (Text and Button) */}

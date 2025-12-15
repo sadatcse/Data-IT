@@ -4,9 +4,8 @@ import { FaChevronRight } from 'react-icons/fa'; // Ensure you have react-icons 
 
 const IdeaCTA = () => {
   return (
-    // Applied the solid Royal Blue color to match your reference image exactly.
-    // Replaced 'bg-gradient-to-r...' with 'bg-blue-600'.
-    <section className="bg-blue-600 py-12">
+    // Replaced 'bg-blue-600' with 'bg-primary'
+    <section className="bg-primary py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           
@@ -23,7 +22,8 @@ const IdeaCTA = () => {
           {/* Button Section: Kept the template structure but updated text/icon */}
           <Link 
             to="/contact" 
-            className="group inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-bold rounded-sm text-white hover:bg-white hover:text-blue-600 transition-all duration-300 shadow-lg"
+            // Replaced hover:text-blue-600 with hover:text-primary
+            className="group inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-bold rounded-sm text-white hover:bg-white hover:text-primary transition-all duration-300 shadow-lg"
           >
             Contact Us
             {/* Chevron Icon matched to the image */}

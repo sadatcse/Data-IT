@@ -37,11 +37,12 @@ const Industries = () => {
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+          {/* text-gray-900 changed to text-black */}
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 leading-tight">
             Our Affordable Website Design & Development Services <br className="hidden md:block" />
-            Are Suitable For The Following Industries.
+             And Marketing Are Suitable For The Following Industries.
           </h2>
-          {/* Blue Divider - matched to image */}
+          {/* Blue Divider - using bg-primary */}
           <div className="flex justify-center gap-1 mt-4">
              <div className="h-1 w-2 bg-primary rounded-full"></div>
              <div className="h-1 w-16 bg-primary rounded-full"></div>
@@ -55,11 +56,11 @@ const Industries = () => {
               key={index} 
               className="flex items-center gap-3 group hover:translate-x-1 transition-transform duration-300"
             >
-              {/* Icon */}
+              {/* Icon - using text-primary */}
               <FaCheckCircle className="text-primary flex-shrink-0 text-lg" />
               
-              {/* Text */}
-              <span className="text-gray-700 font-medium text-sm md:text-base">
+              {/* Text - text-gray-700 changed to text-gray-dark */}
+              <span className="text-gray-dark font-medium text-sm md:text-base">
                 {item}
               </span>
             </div>

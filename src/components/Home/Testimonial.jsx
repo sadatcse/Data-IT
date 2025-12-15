@@ -27,8 +27,8 @@ const TestimonialCard = ({ name, role, image, review, rating }) => {
             {/* Quote Icon - Matched to CheckCircle style (text-primary) */}
             <FaQuoteLeft className="w-8 h-8 text-primary mb-4 opacity-30" />
             
-            {/* Review Text - Matched to ProcessCard description (text-gray-600) */}
-            <p className="text-gray-600 leading-relaxed italic mb-6 flex-grow">
+            {/* Review Text - Matched to ProcessCard description (text-gray-dark) */}
+            <p className="text-gray-dark leading-relaxed italic mb-6 flex-grow">
                 "{review}"
             </p>
 
@@ -38,7 +38,7 @@ const TestimonialCard = ({ name, role, image, review, rating }) => {
             </div>
 
             {/* User Profile Section */}
-            <div className="flex items-center mt-auto border-t border-gray-100 pt-4">
+            <div className="flex items-center mt-auto border-t border-gray-200 pt-4">
                 {/* DaisyUI Avatar with Primary Ring */}
                 <div className="avatar">
                     <div className="w-12 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -47,10 +47,10 @@ const TestimonialCard = ({ name, role, image, review, rating }) => {
                 </div>
                 
                 <div className="ml-4">
-                    <h4 className="text-lg font-semibold text-gray-900">
+                    <h4 className="text-lg font-semibold text-black">
                         {name}
                     </h4>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-dark">
                         {role}
                     </p>
                 </div>
@@ -64,43 +64,43 @@ const Testimonial = () => {
     const reviews = [
         {
             id: 1,
-            name: "Sarah Johnson",
-            role: "Marketing Director",
-            image: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+            name: "ABUL KALAM AZAD ",
+            role: "Managing Director of Multigym premium & Apiz Global",
+            image: "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/abulkalam.png",
             rating: 5,
-            review: "We used smart strategies to implement this, and the results were instant. Ideally, this is the best solution we've found."
+      review: "Their web design and development service transformed our online presence. The site is fast, modern, and perfectly aligned with our brand. The team worked with real dedication and delivered far beyond our expectations."
         },
         {
             id: 2,
-            name: "Michael Chen",
-            role: "Software Engineer",
-            image: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+            name: "Dr Sadik Khan",
+            role: "Associate Professor of Jackson State University ",
+            image: "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/sadik.png",
             rating: 4.5,
-            review: "The development process was smooth. The team followed strict guidelines and the delivery was exactly on time without sacrificing quality."
+        review: "Professional, detail-oriented, and extremely reliable. They followed every guideline we provided and delivered a clean, responsive website. The entire process—from planning to deployment—was smooth and timely."
         },
         {
             id: 3,
-            name: "Emily Davis",
-            role: "Freelance Designer",
-            image: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+            name: "Mufakkharul Islam Khasru",
+            role: "Managing Director of Finlay Properties Limited",
+            image: "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Mufakkharul.png",
             rating: 5,
-            review: "Every concept needs a solid foundation, and this tool provided exactly that. It's user-friendly and the design strategy is flawless."
+            review: "Outstanding work! They built a high-quality website with strong UI/UX and excellent performance. The team truly understood our business needs and delivered a professional digital platform that added real value."
         }
     ];
 
     return (
-        // Section wrapper matched to ProcessSection (py-16 md:py-24 bg-gray-50)
-        <section className="py-16 md:py-24 bg-gray-50">
+        // Section wrapper mapped to bg-gray-light
+        <section className="py-16 md:py-24 bg-gray-light">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Header - Exact match to ProcessSection header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">
+                    <h2 className="text-4xl font-extrabold text-black tracking-tight">
                         Client Testimonials
                     </h2>
                     {/* Decorative Line - bg-primary */}
                     <div className="h-1 w-16 bg-primary mx-auto mt-3 rounded-full"></div>
-                    <p className="mt-4 text-xl text-gray-600">
+                    <p className="mt-4 text-xl text-gray-dark">
                         Feedback from our valued partners
                     </p>
                 </div>

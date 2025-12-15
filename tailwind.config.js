@@ -39,7 +39,7 @@ export default {
           ...require("daisyui/src/theming/themes")["[data-theme=light]"],
 
           /* You may assign primary/secondary using your palette */
-          primary: "#056FFD",         // main blue
+          primary: "#0099ff",         // main blue
           "primary-focus": "#330FEE", // deeper blue
 
           secondary: "#B1DAF8",

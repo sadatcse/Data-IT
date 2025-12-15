@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 
 const MarketingCTA = () => {
   return (
-    // Used a gradient (blue to indigo) to give it a more dynamic, "digital" feel.
-    // You can revert to 'bg-blue-600' if you prefer solid colors.
-    <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-12">
+    // Updated gradient to use primary and primary-focus
+    <section className="bg-gradient-to-r from-primary to-blue-500 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           
@@ -22,7 +21,7 @@ const MarketingCTA = () => {
           {/* Button Section */}
           <Link 
             to="/contact" 
-            className="group inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-bold rounded-sm text-white hover:bg-white hover:text-indigo-700 transition-all duration-300 shadow-lg"
+            className="group inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-bold rounded-sm text-white hover:bg-white hover:text-primary transition-all duration-300 shadow-lg"
           >
             Get Your Free Audit
             {/* Chart/Graph Icon for Marketing Context */}

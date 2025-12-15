@@ -27,13 +27,13 @@ const Showcase = () => {
         
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-black">
             Our Work
           </h2>
           <div className="h-1 w-16 bg-primary mx-auto mt-4"></div>
           
-          <p className="mt-6 text-gray-500 max-w-2xl mx-auto">
-             Explore our latest portfolio items below.
+          <p className="mt-6 text-gray-dark max-w-2xl mx-auto">
+              Explore our latest portfolio items below.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ const Showcase = () => {
             <Link 
               key={item.Serial} 
               to={`/project/${item.url_title}`}
-              className="group relative h-[400px] w-full overflow-hidden bg-gray-100 shadow-md hover:shadow-xl transition-shadow duration-300 block"
+              className="group relative h-[400px] w-full overflow-hidden bg-gray-light shadow-md hover:shadow-xl transition-shadow duration-300 block"
             >
               <img 
                 src={`/src/assets/Portfolio/${item.image_name}`} 
@@ -53,7 +53,7 @@ const Showcase = () => {
               />
 
               <div className="absolute bottom-6 left-6 right-6 bg-white p-6 text-center shadow-lg rounded-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-xl font-bold text-black mb-1">
                   {item.name}
                 </h3>
               </div>
