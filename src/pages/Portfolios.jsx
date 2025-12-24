@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import { FaArrowRight, FaLayerGroup } from 'react-icons/fa'; // Icons for visual flair
 import usePortfolioData from '../hooks/usePortfolio';
@@ -66,7 +66,7 @@ const Portfolios = () => {
               {/* Image Area with Zoom Effect */}
               <figure className="relative h-64 overflow-hidden bg-gray-100">
                 <img 
-                  src={`/src/assets/Portfolio/${item.image_name}`} 
+                  src={item.image_url}
                   alt={item.name} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

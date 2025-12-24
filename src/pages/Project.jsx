@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useParams } from 'react-router-dom';
 import usePortfolioData from '../hooks/usePortfolio'; // Adjust path if needed
 
@@ -35,7 +35,7 @@ const Project = () => {
         return (
             <div className="flex flex-col items-center justify-center h-screen text-center px-4">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Project Not Found</h2>
-                <p className="text-gray-600">We couldn't find a project matching: <span className="font-mono text-primary">{id}</span></p>
+                <p className="text-gray-600">We could not find a project matching: <span className="font-mono text-primary">{id}</span></p>
             </div>
         );
     }
@@ -48,7 +48,7 @@ const Project = () => {
                 {/* 1. Feature Image */}
                 <div className="w-full mb-16">
                     <img 
-                        src={`/src/assets/Portfolio/${project.image_name}`} 
+                        src={project.image_url}
                         alt={project.name} 
                         className="w-full h-auto object-cover rounded-lg shadow-lg"
                     /> 

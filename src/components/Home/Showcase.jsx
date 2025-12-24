@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom'; // 1. Import Link
 import usePortfolioData from '../../hooks/usePortfolio'; 
 
@@ -47,7 +47,7 @@ const Showcase = () => {
               className="group relative h-[400px] w-full overflow-hidden bg-gray-light shadow-md hover:shadow-xl transition-shadow duration-300 block"
             >
               <img 
-                src={`/src/assets/Portfolio/${item.image_name}`} 
+                src={item.image_url}
                 alt={item.name} 
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />

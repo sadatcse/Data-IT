@@ -1,0 +1,54 @@
+[
+  { "serial": 1, "name": "Abu Bakkar Siddique", "position": "CEO", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Abu+Bakkar+Siddique-min.png" },
+  { "serial": 2, "name": "Morium Khatun", "position": "COO", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Morium+Khatun-min.png" },
+  { "serial": 3, "name": "Imtiyaz Mahmud", "position": "Brand Manager", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Imtiyaz+Mahmud-min.png" },
+  { "serial": 4, "name": "Md Sadat Khan", "position": "Team Leader", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Md+Sadat+Khan-min.png" },
+  { "serial": 5, "name": "Jahangir Bhuiyan", "position": "Head of Sales", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Jahangir+Bhuiyan-min.png" },
+  { "serial": 6, "name": "Abu Talha", "position": "Software Engineer (AI/ML)", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Abu+Talha-min.png" },
+
+  { "serial": 7, "name": "Md Mahamudur Rahman", "position": "Manager", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Md+Mahamudur+Rahman-min.png" },
+  { "serial": 8, "name": "Tanzimul Hasan", "position": "Accounts Manager", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Tanzimul+Hasan-min.png" },
+  { "serial": 9, "name": "Abdul Mohaimin Patwary", "position": "Specialist (Accounts)", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Abdul+Mohaimin+Patwary-min.jpg" },
+
+  { "serial": 10, "name": "Abu Rasel", "position": "Office Manager", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Abu+Rasel-min.png" },
+  { "serial": 11, "name": "Md Rabiul Hasan", "position": "Senior Executive Engineer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Md+Rabiul+Hasan-min.png" },
+  { "serial": 12, "name": "MD Rabbi Islam", "position": "Engineer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/MD+Rabbi+Islam-min.jpg" },
+  { "serial": 13, "name": "MD. Sirajul Islam Ripon", "position": "HR Manager", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Sirajul+Islam+Ripon-min.jpg" },
+
+  { "serial": 14, "name": "Imran Khan", "position": "UX Designer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Imran+Khan-min.jpg" },
+  { "serial": 15, "name": "Tasnim Ara", "position": "Junior UX Designer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Tasnim+Ara-min.jpg" },
+
+  { "serial": 16, "name": "Hasan Mahmud", "position": "Principal Software Engineer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Hasan+Mahmud-min.jpg" },
+  { "serial": 17, "name": "Mithila Saha", "position": "SQA Engineer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Mithila+Saha-min.jpeg" },
+
+  { "serial": 18, "name": "Raihan Kabir", "position": "Software Engineer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Raihan+Kabir-min.jpg" },
+  { "serial": 19, "name": "Foysal Hossain", "position": "Office Executive", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Foysal+Hossain-min.jpg" },
+
+  { "serial": 20, "name": "Saiful Islam", "position": "Senior Software Engineer", "photoUrl": "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Team/Saiful+Islam-min.jpg" },
+
+  { "serial": 21, "name": "Arman Hossain", "position": "Senior Software Engineer", "photoUrl": "" },
+  { "serial": 22, "name": "Nabil Rahman", "position": "Software Engineer", "photoUrl": "" },
+
+  { "serial": 23, "name": "Siam Ahmed", "position": "Junior Software Engineer", "photoUrl": "" },
+  { "serial": 24, "name": "Farhan Malik", "position": "Business Executive", "photoUrl": "" },
+
+  { "serial": 25, "name": "Adnan Rahman", "position": "Bridge Engineer", "photoUrl": "" },
+  { "serial": 26, "name": "Zubair Hasan", "position": "Business Executive", "photoUrl": "" },
+  { "serial": 27, "name": "Tahmidul Islam", "position": "Product Manager", "photoUrl": "" },
+
+  { "serial": 28, "name": "Asif Mahmud", "position": "Junior Software Engineer", "photoUrl": "" },
+  { "serial": 29, "name": "Nayeem Siddique", "position": "Junior Software Engineer", "photoUrl": "" },
+  { "serial": 30, "name": "Samira Khan", "position": "Software Engineer", "photoUrl": "" },
+
+  { "serial": 31, "name": "Puja Das", "position": "Junior Software Engineer", "photoUrl": "" },
+  { "serial": 32, "name": "Rezaul Karim", "position": "Junior Software Engineer", "photoUrl": "" },
+  { "serial": 33, "name": "Shahriar Anik", "position": "Junior Software Engineer", "photoUrl": "" },
+  { "serial": 34, "name": "Fardin Ahmed", "position": "Junior Software Engineer", "photoUrl": "" },
+
+  { "serial": 35, "name": "Sakib Hossain", "position": "Digital Marketing Manager", "photoUrl": "" },
+  { "serial": 36, "name": "Afsana Rahman", "position": "SEO Specialist", "photoUrl": "" },
+  { "serial": 37, "name": "Mehedi Hasan", "position": "Social Media Manager", "photoUrl": "" },
+  { "serial": 38, "name": "Nabila Islam", "position": "Content Strategist", "photoUrl": "" },
+  { "serial": 39, "name": "Rony Chowdhury", "position": "Performance Marketing Executive", "photoUrl": "" },
+  { "serial": 40, "name": "Jannatul Ferdous", "position": "Email Marketing Specialist", "photoUrl": "" }
+]

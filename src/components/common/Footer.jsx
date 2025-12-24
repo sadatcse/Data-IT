@@ -1,12 +1,9 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-// Importing necessary icons from lucide-react (Note: I use common replacements where the exact icon from the image isn't clear, e.g., 'Mail' for email, 'MapPin' for location, and 'Phone' for phone numbers.)
-import { Mail, Phone, MapPin, Linkedin, X, Instagram, Facebook } from 'lucide-react'; 
 
-// NOTE: Original Logo component/path kept as per provided code structure
+import { NavLink } from 'react-router-dom';
+import { Mail, Phone, MapPin, Linkedin, X, Instagram, Facebook } from 'lucide-react'; 
 import Logo from '../../assets/Logo.png'; 
 
-// --- Constants (Updated for DataIT Solutions content) ---
+// --- Constants ---
 
 const LOCATION_DETAILS = [
     "Shaymoli 3 no road,House no. 27/1/B, Apon Heights, Flat 10-B Dhaka ",
@@ -19,7 +16,6 @@ const CONTACT_DETAILS = [
     { type: "Phone-US", icon: Phone, value: "+1-000-000-0000 - USA", link: "tel:+1400000000" },
 ];
 
-// Icons used in the image's social links (LinkedIn, X (Twitter), Instagram, Facebook)
 const SOCIAL_LINKS = [
     { name: "LinkedIn", icon: Linkedin, url: "#" }, 
     { name: "X (Twitter)", icon: X, url: "#" }, 
@@ -27,12 +23,17 @@ const SOCIAL_LINKS = [
     { name: "Facebook", icon: Facebook, url: "#" }, 
 ];
 
-// Re-defining for visual match to the image's year
-const CURRENT_YEAR = new Date().getFullYear();
-const COPYRIGHT_YEAR = "2025"; // Hardcoded to match the image text
-const COPYRIGHT_TEXT = `Copyright © ${COPYRIGHT_YEAR} DataIT  | Powered by DataIT `;
+const POLICY_LINKS = [
+    { name: "Terms of use", path: "/terms-of-use" },
+    { name: "Privacy policy", path: "/privacy-policy" },
+    { name: "Cookie policy", path: "/cookie-policy" },
+    { name: "Refund policy", path: "/refund-policy" },
+];
 
-// --- Reusable Sub-Components (Styled for the dark theme) ---
+const COPYRIGHT_YEAR = "2025"; 
+const COPYRIGHT_TEXT = `Copyright © ${COPYRIGHT_YEAR} DataIT`;
+
+// --- Reusable Sub-Components ---
 
 const DetailItem = ({ Icon, text, link }) => (
     <a href={link} className="flex items-start text-sm text-gray-400 hover:text-sky-400 transition-colors mt-3">
@@ -45,26 +46,20 @@ const DetailItem = ({ Icon, text, link }) => (
 
 const Footer = () => {
     return (
-        // Changed background to match the dark color in the image.
         <footer className="bg-[#1C2028] text-white border-t border-gray-700">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                {/* Main Content Grid: 3 columns on medium/large screens */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-8 border-b border-gray-700">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+                
+                {/* Top Section: Main Info (3 Columns) */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8">
 
-                    {/* 1. Logo & Description (Left Column) */}
+                    {/* 1. Logo & Socials */}
                     <div className="flex flex-col space-y-4">
-                        {/* Note: Assuming 'Logo' component path is correctly linked to the DataIT logo image */}
                         <div className="w-40"> 
-                            {/* Placeholder for the complex 'DataIT Solutions' Logo/Text structure */}
                             <img src={Logo} alt="DataIT Solutions Logo" className="h-auto w-full max-w-xs" /> 
-                           
                         </div>
-                        
                         <p className="text-sm text-gray-400 max-w-xs">
                             Data IT is a full-service technology agency delivering innovative digital solutions for businesses of all sizes.
                         </p>
-
-                        {/* Social Media Icons (styled and placed as per image) */}
                         <div className="flex space-x-4 pt-2">
                             {SOCIAL_LINKS.map((social) => (
                                 <a 
@@ -72,8 +67,6 @@ const Footer = () => {
                                     href={social.url} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
-                                    aria-label={social.name}
-                                    // Styling to match the white/hover-white look in the image
                                     className="text-white border border-white p-2 rounded-full hover:bg-white hover:text-[#1C2028] transition-colors"
                                 >
                                     <social.icon className="h-4 w-4" />
@@ -82,20 +75,20 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* 2. Location (Center Column) */}
+                    {/* 2. Location */}
                     <div>
                         <h3 className="text-xl font-bold text-white mb-4">Location</h3>
                         {LOCATION_DETAILS.map((address, index) => (
                             <DetailItem 
                                 key={index} 
-                                Icon={MapPin} // Pin icon for location
+                                Icon={MapPin} 
                                 text={address} 
-                                link={`https://maps.google.com/?q=${encodeURIComponent(address)}`} // Google Maps link
+                                link={`https://maps.google.com/?q=${encodeURIComponent(address)}`} 
                             />
                         ))}
                     </div>
 
-                    {/* 3. Contact Us (Right Column) */}
+                    {/* 3. Contact Us */}
                     <div>
                         <h3 className="text-xl font-bold text-white mb-4">Contact Us</h3>
                         {CONTACT_DETAILS.map((contact) => (
@@ -109,17 +102,30 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Copyright Row (Bottom Section) */}
-                <div className="mt-6 text-center">
-                    <p className="text-sm text-gray-500">
-                        {COPYRIGHT_TEXT}
+                {/* Bottom Bar: Copyright Left, Links Right */}
+                <div className="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                    
+                    {/* Left Side: Copyright */}
+                    <p className="text-sm text-gray-500 order-2 md:order-1 mt-4 md:mt-0">
+                        {COPYRIGHT_TEXT} | Powered by DataIT
                     </p>
+
+                    {/* Right Side: Policy Links */}
+                    <ul className="flex flex-wrap justify-center md:justify-end space-x-6 order-1 md:order-2">
+                        {POLICY_LINKS.map((link) => (
+                            <li key={link.name}>
+                                <NavLink 
+                                    to={link.path} 
+                                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                                >
+                                    {link.name}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
             </div>
-            {/* The WhatsApp and Scroll-to-Top buttons are typically handled outside the main footer component,
-                but I'll add a structural comment here for completeness. */}
-            {/* WhatsApp Icon/Button & Scroll-to-Top Icon/Button */}
         </footer>
     );
 };

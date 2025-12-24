@@ -1,100 +1,63 @@
-import React from 'react';
-
-// The Fake JSON Data
-const Data = [
-  {
-
-    image: "https://www.ebl.com.bd/assets/aboutus/directors/Showkat_Ali_Chowdhury.webp"
-  },
-  {
-
-    image: "https://www.ebl.com.bd/assets/aboutus/directors/Anis_Ahmed.webp"
-  },
-  {
-
-    image: "https://www.ebl.com.bd/assets/aboutus/directors/Salina-Ali.webp"
-  },
-  {
-
-    image: "https://www.ebl.com.bd/assets/aboutus/directors/K_J_S_Banu.webp"
-  }
-];
-
 const OurStory = () => {
+  const storyImage = "https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Our+Story.jpeg";
+
   return (
     <section className="w-full py-20 px-6 bg-[#fdfdfd]">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-16">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 uppercase tracking-wide">
+          Our Story
+        </h2>
+        <div className="h-1 w-16 bg-primary mt-4 mx-auto rounded-full"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 lg:gap-16">
         
-        {/* --- LEFT COLUMN: Image Collage --- */}
-        {/* We use a grid with 2 columns to create the scattered masonry look */}
-        <div className="w-full lg:w-1/2 grid grid-cols-2 gap-6 relative">
-          
-          {/* Column 1: Shifted slightly up */}
-          <div className="flex flex-col gap-6">
-            <div className="overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-               <img 
-                 src={Data[0].image} 
-                 alt={Data[0].name} 
-                 className="w-full h-48 object-cover"
-               />
-            </div>
-            <div className="overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-               <img 
-                 src={Data[1].image} 
-                 alt={Data[1].name} 
-                 className="w-full h-64 object-cover"
-               />
-            </div>
+        {/* --- LEFT COLUMN: Single Image --- */}
+        <div className="w-full lg:w-1/2">
+          <div className="overflow-hidden rounded-2xl shadow-xl">
+            <img 
+              src={storyImage} 
+              alt="Our Story - Team collaboration" 
+              className="w-full h-auto lg:h-full max-h-[650px] object-cover hover:scale-105 transition-transform duration-500"
+            />
           </div>
-
-          {/* Column 2: Shifted down (marginTop) to create the offset effect */}
-          <div className="flex flex-col gap-6 mt-12">
-            <div className="overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-               <img 
-                 src={Data[2].image} 
-                 alt={Data[2].name} 
-                 className="w-full h-64 object-cover"
-               />
-            </div>
-            {/* The small bottom image */}
-            <div className="overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-               <img 
-                 src={Data[3].image} 
-                 alt={Data[3].name} 
-                 className="w-full h-40 object-cover"
-               />
-            </div>
-          </div>
-
         </div>
 
         {/* --- RIGHT COLUMN: Text Content --- */}
-        <div className="w-full lg:w-1/2 pt-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-            Our Story
-          </h2>
-          
+        <div className="w-full lg:w-1/2 lg:pt-4">
           <div className="text-gray-600 space-y-6 text-lg leading-relaxed">
+            
             <p>
-              Data IT started as a visionary project in 2024 to solve a critical problem 
-              our founders were experiencing — the lack of truly customized digital 
-              solutions for growing businesses. What began as a small initiative 
-              quickly gained traction, evolving into a full-service technology partner 
-              serving clients across industries.
+              Data IT began as a visionary initiative in 2024, driven by a real challenge 
+              our founders faced—the absence of truly customized digital solutions for 
+              growing businesses. What started as a small idea quickly gained momentum, 
+              evolving into a full-service technology partner serving clients across 
+              multiple industries.
             </p>
             
             <p>
-              The team was initially just a few passionate developers working on 
-              projects they believed in. Steadily, we grew into a dedicated workforce 
-              committed to transparency and excellence. Today, we are proud to offer 
-              tailored software that helps organizations take on any challenge.
+              In the beginning, our team consisted of a few passionate developers working 
+              on projects they genuinely believed in. Over time, we grew into a dedicated 
+              workforce built on transparency, trust, and technical excellence. Today, 
+              we proudly deliver tailored software solutions that empower organizations 
+              to overcome complex challenges.
             </p>
 
             <p>
-              All that to say, we are a product-led company built to help our customers 
-              get off the ground and grow. Our team is an optimistic and gratitude-filled 
-              group of experts dedicated to creating products our customers will love.
+              At our core, we are a product-led company focused on helping businesses get 
+              off the ground and scale with confidence. Our team is an optimistic, 
+              purpose-driven group of experts committed to building products our customers 
+              truly love and rely on.
             </p>
+
+            <p>
+              We believe in long-term partnerships rather than short-term projects, 
+              ensuring every solution we build grows alongside our clients’ ambitions. 
+              Innovation guides our process, but real-world business impact defines our 
+              success. At Data IT, our greatest achievement is seeing our customers move 
+              forward with clarity, control, and confidence.
+            </p>
+
           </div>
         </div>
 

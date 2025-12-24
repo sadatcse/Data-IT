@@ -1,8 +1,13 @@
-import React from 'react';
-
 const AboutDataIT = () => {
   return (
     <section className="w-full py-16 px-4 bg-white">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 uppercase tracking-wide">
+          Your trusted partner in digital transformation
+        </h2>
+        <div className="h-1 w-16 mt-4 bg-primary mx-auto rounded-full"></div>
+      </div>
+
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* --- LEFT COLUMN: Image & Shape --- */}
@@ -18,23 +23,24 @@ const AboutDataIT = () => {
           </div>
 
           {/* The Blue Semi-Circle Shape */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[10%] w-[120%] max-w-[400px] h-48 bg-[#0099ff] rounded-b-full -z-0"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[10%] w-[120%] max-w-[400px] h-48 bg-primary rounded-b-full -z-0"></div>
         </div>
 
         {/* --- RIGHT COLUMN: Content --- */}
         <div className="w-full md:w-1/2 text-left">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Your trusted partner in digital growth.
+        
+          <h2 className="text-5xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Building custom digital solutions for modern businesses
           </h2>
-          
+      
           <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-            We understand that every business operates differently. That's why we don't offer "one size fits all" products. Instead, we are dedicated to delivering customized software solutions that perfectly match your business needs, helping you streamline operations and succeed in the modern digital world.
+            At Data IT, we understand that every business operates differently. That’s why we don’t believe in one-size-fits-all products. We design and develop fully customized software, web applications, and digital platforms that align perfectly with your business goals—helping you automate operations, gain control, and grow with confidence in the digital era.
           </p>
 
           <ul className="space-y-4">
-            <ListItem text="Web Design & Development with professional dashboards" />
-            <ListItem text="Custom E-Commerce Platforms for B2B and B2C" />
-            <ListItem text="Digital Marketing & Branding to grow your presence" />
+            <ListItem text="Custom Web Design & Development with smart dashboards" />
+            <ListItem text="Scalable E-Commerce Platforms for B2B and B2C businesses" />
+            <ListItem text="Performance-driven Digital Marketing & Brand Growth solutions" />
           </ul>
         </div>
 
@@ -46,9 +52,8 @@ const AboutDataIT = () => {
 // Helper component for the checkmark list items
 const ListItem = ({ text }) => (
   <li className="flex items-start gap-3">
-    {/* Custom Green Checkmark SVG */}
     <svg 
-      className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" 
+      className="w-6 h-6 text-primary flex-shrink-0 mt-1" 
       fill="none" 
       stroke="currentColor" 
       viewBox="0 0 24 24" 
