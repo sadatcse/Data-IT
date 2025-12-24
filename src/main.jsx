@@ -66,6 +66,7 @@ import CustomWebApplicationDevelopment from './pages/Services/Website and Conten
 // Slider CSS
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import Team from './pages/Services/Team'
 
 const router = createBrowserRouter([
   {
@@ -121,6 +122,9 @@ const router = createBrowserRouter([
       { path: 'seo-local', element: <SeoLocal /> },
       { path: 'seo-professional', element: <SeoProfessional /> },
       { path: 'seo-travel', element: <SeoTravelAgents /> },
+       { path: 'team', element: <Team /> },
+
+
 
       // 🔹 Services → SMM
       { path: 'social-media-marketing', element: <SocialMediaMarketing /> },
