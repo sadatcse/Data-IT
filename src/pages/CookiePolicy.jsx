@@ -1,8 +1,19 @@
-
+// src/pages/CookiePolicy.jsx
+import React from 'react';
+import SEO from '../components/SEO/SEO';
 
 const CookiePolicy = () => {
   return (
     <main className="w-full font-sans">
+      {/* SEO Implementation for Cookie Policy */}
+      <SEO 
+        title="Cookie Policy | Data IT - Transparency & User Experience"
+        description="Read Data IT's Cookie Policy to understand how we use cookies to improve your browsing experience, analyze site traffic, and ensure security."
+        keywords="Cookie Policy, Data IT Cookies, Website Tracking, User Experience, Digital Privacy, Browser Cookies"
+        url="/cookie-policy"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* ================= HERO SECTION ================= */}
       <section className="bg-navy-dark text-white py-20 px-6">

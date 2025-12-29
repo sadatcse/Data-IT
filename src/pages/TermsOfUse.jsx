@@ -1,8 +1,20 @@
-
+// src/pages/TermsOfUse.jsx
+import React from 'react';
+import SEO from '../components/SEO/SEO';
 
 const TermsOfUse = () => {
   return (
     <main className="w-full font-sans">
+      {/* SEO Implementation for Terms of Use */}
+      <SEO 
+        title="Terms of Use | Data IT - Service Agreement & Policies"
+        description="Read the Terms of Use for Data IT. These terms govern your access to our software, digital marketing services, and websites. By using our services, you agree to these conditions."
+        keywords="Terms of Use, Data IT Legal, Service Agreement, User Policy, Website Terms, Software Usage Rights, Data IT Contracts"
+        url="/terms-of-use"
+        // Uses default site OG image if specific one not provided
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* ================= HERO ================= */}
       <section className="bg-navy-dark text-white py-20 px-6">

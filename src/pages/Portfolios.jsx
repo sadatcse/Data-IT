@@ -1,15 +1,14 @@
-
-import { Link } from 'react-router-dom'; // Import Link for navigation
-import { FaArrowRight, FaLayerGroup } from 'react-icons/fa'; // Icons for visual flair
+// src/pages/Portfolios.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaArrowRight, FaLayerGroup } from 'react-icons/fa';
 import usePortfolioData from '../hooks/usePortfolio';
+import SEO from '../components/SEO/SEO';
 
 const Portfolios = () => {
-  // We generally don't need 'id' for the full list, but keeping it if you have specific filtering logic later
-  // const { id } = useParams(); 
-  
   const { data, loading, error } = usePortfolioData();
 
-  // --- Loading State (DaisyUI Spinner) ---
+  // --- Loading State ---
   if (loading) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-base-200">
@@ -21,7 +20,7 @@ const Portfolios = () => {
     );
   }
 
-  // --- Error State (DaisyUI Alert) ---
+  // --- Error State ---
   if (error) {
     return (
       <div className="min-h-screen flex justify-center items-center bg-base-200 p-4">
@@ -34,24 +33,30 @@ const Portfolios = () => {
   }
 
   return (
-    <div className="min-h-screen bg-base-200 font-sans">
+    <div className="bg-gray-50 min-h-screen pb-20">
       
-      {/* --- 1. Hero Section --- */}
-      <section className=" py-16 md:py-24 shadow-sm relative overflow-hidden">
-        {/* Decorative background blur */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-primary/10 blur-3xl rounded-full -z-10"></div>
+      {/* SEO Implementation for Portfolio Listing */}
+      <SEO 
+        title="Our Portfolio - Custom Software & Web Projects"
+        description="Explore Data IT's portfolio of custom software, web applications, and digital marketing success stories. See how we transform businesses with technology."
+        keywords="Data IT Portfolio, Software Case Studies, Web Development Projects, App Development Examples, Client Success Stories"
+        url="/portfolio"
+        // Uses default site OG image if specific one not provided
+        siteName="Data IT"
+        type="website"
+      />
 
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-base-content mb-4 tracking-tight">
-            Our <span className="text-primary">Portfolios</span>
-          </h2>
-          <div className="h-1 w-24 bg-primary mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-base-content/70 max-w-2xl mx-auto">
-            Explore our collection custom-built solutions. 
-            From innovative apps to stunning web platforms, we deliver excellence.
-          </p>
+      {/* --- 1. Hero Section --- */}
+
+      {/* Decorative background blur */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-primary/10 blur-3xl rounded-full -z-10"></div>
+      <div className="bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold text-gray-800">Our Portfolios</h1>
+          <p className="text-sm text-gray-500 mt-2">Home • Portfolios</p>
         </div>
-      </section>
+      </div>
+
 
       {/* --- 2. Portfolio Grid --- */}
       <section className="container mx-auto px-4 py-16">
@@ -90,9 +95,6 @@ const Portfolios = () => {
 
                 {/* Card Footer / Action */}
                 <div className="card-actions justify-end mt-6 pt-4 border-t border-base-200">
-                  {/* Make sure this link matches your App's route structure.
-                     Assuming: /project/some-url-title 
-                  */}
                   <Link 
                     to={`/project/${item.url_title}`} 
                     className="btn btn-outline btn-primary btn-sm group-hover:btn-active transition-all"

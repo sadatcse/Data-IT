@@ -1,8 +1,23 @@
-
+// src/pages/TechnologyTransformation.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO/SEO';
 
 const TechnologyTransformation = () => {
   return (
     <main className="w-full font-sans">
+
+      {/* SEO Implementation for Technology Transformation Article */}
+      <SEO 
+        title="Driving Real Business Change Through Technology"
+        description="Explore how Data IT uses custom technology and automation to transform business operations. Learn why strategic digital transformation is key to sustainable growth."
+        keywords="Business Transformation, Digital Strategy, Custom Software, Business Automation, Data IT Philosophy, Operational Efficiency, Technology Growth"
+        url="/technology-transformation"
+        image="/images/tech-transformation-og.jpg"
+        type="article"
+        siteName="Data IT"
+        author="Data IT Team"
+      />
 
       {/* ================= HERO SECTION ================= */}
       <section className="bg-navy-dark text-white py-24 px-6">
@@ -192,9 +207,11 @@ const TechnologyTransformation = () => {
         <p className="text-lg mb-8 text-white/90">
           Let’s build a digital solution that works exactly the way your business needs.
         </p>
-        <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
-          Talk to Data IT
-        </button>
+        <Link to="/contact">
+          <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Talk to Data IT
+          </button>
+        </Link>
       </section>
 
     </main>

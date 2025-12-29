@@ -1,8 +1,10 @@
+// src/pages/ContactUs.jsx
 import React, { useState, useRef } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 import { HiOutlineMapPin } from 'react-icons/hi2';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+import SEO from '../components/SEO/SEO';
 
 import HeroImage from '../assets/contact-Hero-Image-1.jpg'; 
 
@@ -80,6 +82,17 @@ const ContactUs = () => {
 
     return (
         <div className="bg-white min-h-screen">
+            {/* SEO Implementation for Contact Page */}
+            <SEO 
+                title="Contact Us | Data IT - Get in Touch"
+                description="Contact Data IT for custom software development and digital marketing services. Visit our Dhaka office, call us at +880 1710000000, or email sales@datait.com.bd."
+                keywords="Contact Data IT, Data IT Address, Software Company Dhaka Phone, IT Support Bangladesh, Hire Developers Contact, Digital Marketing Agency Contact"
+                url="/contact"
+                image={HeroImage} // Using the imported hero image for OG
+                siteName="Data IT"
+                type="website"
+            />
+
             {/* --- Hero Section --- */}
             <div 
                 className="relative bg-cover bg-center h-64 flex items-center justify-start text-white p-8"

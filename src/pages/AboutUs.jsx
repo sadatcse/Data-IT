@@ -1,6 +1,10 @@
+// src/pages/AboutUs.jsx
+import React from 'react';
+import SEO from '../components/SEO/SEO';
+
 import Benefits from '../components/About/Benefits';
 import Businesschanger from '../components/About/Businesschanger';
-import AboutDataIT from '../components/About/Change'; // Assuming this is the Hero/Intro
+import AboutDataIT from '../components/About/Change';
 import Missionvision from '../components/About/Missionvision';
 import OurMoral from '../components/About/OurMoral';
 import OurStory from '../components/About/OurStory';
@@ -10,28 +14,24 @@ import Whatwedo from '../components/About/Whatwedo';
 const AboutUs = () => {
     return (
         <div>
-            {/* 1. THE HOOK: Hero Section */}
+            {/* SEO Implementation with S3 Image */}
+            <SEO 
+                title="About Data IT - Our Journey & Vision"
+                description="Learn about Data IT's journey since 2024. We are a team of dedicated professionals committed to transforming businesses through custom software and digital innovation."
+                keywords="Data IT Story, About Data IT, Software Company History, IT Mission Vision, Data IT Team, Digital Transformation Partner"
+                url="/about"
+                image="https://digitaldatait.s3.ap-southeast-1.amazonaws.com/Our+Story.jpeg" 
+                siteName="Data IT"
+                type="profile"
+            />
+
             <AboutDataIT />
-
-            {/* 2. THE PURPOSE: Move Mission/Vision up. Defines who you are immediately. */}
             <Missionvision />
-
-            {/* 3. THE HISTORY: How you got here. */}
             <OurStory />
-
-            {/* 4. THE CULTURE: Your values/morals flow naturally from your story. */}
             <OurMoral />
-
-            {/* 5. THE PEOPLE: Humanize the brand before selling services. */}
             <OurTeam />
-
-            {/* 6. THE CAPABILITY: What you actually deliver. */}
-      
-
-            {/* 7. THE VALUE PROP: Why the client wins (Logical closing argument). */}
             <Benefits />
-      <Whatwedo />
-            {/* 8. THE ACTION: Final Call to Action. */}
+            <Whatwedo />
             <Businesschanger />
         </div>
     );

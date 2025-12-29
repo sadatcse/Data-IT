@@ -1,8 +1,19 @@
-
+// src/pages/RefundPolicy.jsx
+import React from 'react';
+import SEO from '../components/SEO/SEO';
 
 const RefundPolicy = () => {
   return (
     <main className="w-full font-sans">
+      {/* SEO Implementation for Refund Policy */}
+      <SEO 
+        title="Refund Policy | Data IT - Transparency & Fairness"
+        description="Understand Data IT's refund policy. We value transparency and provide clear guidelines on refunds for custom software, digital marketing, and subscription services."
+        keywords="Refund Policy, Data IT Refunds, Service Cancellation, Software Development Refund, Money Back Policy, Digital Service Agreement"
+        url="/refund-policy"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* ================= HERO SECTION ================= */}
       <section className="bg-navy-dark text-white py-20 px-6">

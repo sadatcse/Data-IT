@@ -1,8 +1,19 @@
-
+// src/pages/PrivacyPolicy.jsx
+import React from 'react';
+import SEO from '../components/SEO/SEO';
 
 const PrivacyPolicy = () => {
   return (
     <main className="w-full font-sans">
+      {/* SEO Implementation for Privacy Policy */}
+      <SEO 
+        title="Privacy Policy | Data IT - Data Protection & Security"
+        description="Learn how Data IT collects, uses, and protects your personal information. Our Privacy Policy ensures transparency and data security for all our clients."
+        keywords="Privacy Policy, Data IT Privacy, Data Protection, GDPR Compliance, User Data Security, Information Collection"
+        url="/privacy-policy"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* ================= HERO SECTION ================= */}
       <section className="bg-navy-dark text-white py-20 px-6">

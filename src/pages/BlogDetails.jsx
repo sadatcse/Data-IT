@@ -1,13 +1,14 @@
+// src/pages/BlogDetails.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Calendar, User, ArrowLeft, Tag, ArrowRight } from 'lucide-react';
 import useBlogData from '../hooks/useBlogData';
-
+import SEO from '../components/SEO/SEO';
 
 const BlogDetails = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-  const { data: blogs, loading } = useBlogData();
+    const { data: blogs, loading } = useBlogData();
     const [post, setPost] = useState(null);
     const [relatedPosts, setRelatedPosts] = useState([]);
 
@@ -25,7 +26,6 @@ const BlogDetails = () => {
                 setPost(foundPost);
 
                 // 2. Find Related Posts (Logic: Same Category, exclude current, max 3)
-                // If no same category found, just shows the latest 3 posts.
                 let related = blogs.filter(b => b.category === foundPost.category && b.id !== currentId);
                 
                 if (related.length < 3) {
@@ -43,10 +43,33 @@ const BlogDetails = () => {
 
     if (loading) return <div className="h-screen flex justify-center items-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>;
     
-    if (!post) return <div className="text-center py-20">Post not found.</div>;
+    if (!post) return (
+        <div className="text-center py-20">
+            {/* SEO for 404 / Post Not Found */}
+            <SEO 
+                title="Article Not Found" 
+                description="The article you are looking for does not exist." 
+                siteName="Data IT"
+            />
+            Post not found.
+        </div>
+    );
 
     return (
         <div className="bg-white min-h-screen">
+            {/* SEO Implementation for Single Blog Post */}
+            <SEO 
+                title={post.title}
+                description={post.summary}
+                keywords={`Data IT Blog, ${post.category}, ${post.title}, Technology Insights`}
+                image={post.image_url}
+                url={`/blog/${post.id}`}
+                type="article"
+                author={post.author_name}
+                publishedTime={post.publish_date}
+                siteName="Data IT"
+            />
+
             {/* 1. Hero Image Section */}
             <div className="w-full h-[400px] relative">
                 <img 
