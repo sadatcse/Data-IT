@@ -7,20 +7,20 @@ import Logo from '../../assets/Logo.png';
 
 const LOCATION_DETAILS = [
     "Shaymoli 3 no road,House no. 27/1/B, Apon Heights, Flat 10-B Dhaka ",
-    "808,W main st arlington Texas 76016, USA",
+    "3210 Normandy Brk Rd Dallas, TX 75212, USA",
 ];
 
 const CONTACT_DETAILS = [
     { type: "Email", icon: Mail, value: "sales@datait.com.bd", link: "mailto:sales@datait.com.bd" },
-    { type: "Phone-BD", icon: Phone, value: "(+880) 1710000000", link: "tel:+919265637864" },
-    { type: "Phone-US", icon: Phone, value: "+1-000-000-0000 - USA", link: "tel:+1400000000" },
+    { type: "Phone-BD", icon: Phone, value: "(+880) 1332776617", link: "tel:+8801332776617" },
+    { type: "Phone-US", icon: Phone, value: "+1-817-412-9800 - USA", link: "tel:+18174129800" },
 ];
 
 const SOCIAL_LINKS = [
-    { name: "LinkedIn", icon: Linkedin, url: "#" }, 
+    { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/company/110905955/" }, 
     { name: "X (Twitter)", icon: X, url: "#" }, 
     { name: "Instagram", icon: Instagram, url: "#" }, 
-    { name: "Facebook", icon: Facebook, url: "#" }, 
+    { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/profile.php?id=61584198225902" }, 
 ];
 
 const POLICY_LINKS = [

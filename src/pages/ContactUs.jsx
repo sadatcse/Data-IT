@@ -88,7 +88,7 @@ const ContactUs = () => {
                 description="Contact Data IT for custom software development and digital marketing services. Visit our Dhaka office, call us at +880 1710000000, or email sales@datait.com.bd."
                 keywords="Contact Data IT, Data IT Address, Software Company Dhaka Phone, IT Support Bangladesh, Hire Developers Contact, Digital Marketing Agency Contact"
                 url="/contact"
-                image={HeroImage} // Using the imported hero image for OG
+                image={HeroImage} 
                 siteName="Data IT"
                 type="website"
             />
@@ -122,7 +122,7 @@ const ContactUs = () => {
                             Apon Heights, Flat 10-B Dhaka
                         </p>
                         <p className="text-gray-600 mt-2 ml-6 flex items-center">
-                            <FaPhoneAlt className="text-sm mr-2 text-blue-600" /> (+880) 1710000000
+                            <FaPhoneAlt className="text-sm mr-2 text-blue-600" /> (+880) 1332776617
                         </p>
                     </div>
 
@@ -131,11 +131,11 @@ const ContactUs = () => {
                             <HiOutlineMapPin className="text-blue-600 mr-2" /> US OFFICE
                         </h2>
                         <p className="text-gray-600 ml-6">
-                            808, W main st arlington <br />
-                            Texas 76016, USA
+                           3414-3498 Normandy Brk Rd Dallas<br />
+                            TX 75212, USA
                         </p>
                         <p className="text-gray-600 mt-2 ml-6 flex items-center">
-                            <FaPhoneAlt className="text-sm mr-2 text-blue-600" /> +1-000-000-0000
+                            <FaPhoneAlt className="text-sm mr-2 text-blue-600" /> +1-817-412-9800
                         </p>
                     </div>
 
@@ -231,6 +231,21 @@ const ContactUs = () => {
                         </button>
                     </form>
                 </div>
+            </div>
+
+            {/* --- NEW: Google Map Section --- */}
+            <div className="w-full h-96 bg-gray-200">
+                <iframe 
+                    title="Data IT Office Location"
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0" 
+                    scrolling="no" 
+                    marginHeight="0" 
+                    marginWidth="0" 
+                    src="https://maps.google.com/maps?q=Apon%20Heights%2C%20Shaymoli%2C%20Dhaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                ></iframe>
             </div>
 
             <a href="tel:9399507884" className="fixed bottom-6 right-6 p-4 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50">
