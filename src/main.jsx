@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
@@ -10,63 +10,63 @@ import {
 
 // Layout & Error
 import Root from './pages/default/Root'
-import Error404 from './pages/default/Error404'
+const Error404 = lazy(() => import('./pages/default/Error404'))
 
 // Common Pages
-import Home from './pages/Home'
-import Portfolios from './pages/Portfolios'
-import ContactUs from './pages/ContactUs'
-import Blog from './pages/Blog'
-import BlogDetails from './pages/BlogDetails'
-import AboutUs from './pages/AboutUs'
-import Careers from './pages/Careers'
-import Project from './pages/Project'
-import TechnologyTransformation from './pages/BusinessTransformation'
+const Home = lazy(() => import('./pages/Home'))
+const Portfolios = lazy(() => import('./pages/Portfolios'))
+const ContactUs = lazy(() => import('./pages/ContactUs'))
+const Blog = lazy(() => import('./pages/Blog'))
+const BlogDetails = lazy(() => import('./pages/BlogDetails'))
+const AboutUs = lazy(() => import('./pages/AboutUs'))
+const Careers = lazy(() => import('./pages/Careers'))
+const Project = lazy(() => import('./pages/Project'))
+const TechnologyTransformation = lazy(() => import('./pages/BusinessTransformation'))
 
 // Legal Pages
-import TermsOfUse from './pages/TermsOfUse'
-import PrivacyPolicy from './pages/PrivacyPolicy'
-import CookiePolicy from './pages/CookiePolicy'
-import RefundPolicy from './pages/RefundPolicy'
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const CookiePolicy = lazy(() => import('./pages/CookiePolicy'))
+const RefundPolicy = lazy(() => import('./pages/RefundPolicy'))
 
 // 🔹 Services → Branding
-import CorporateBranding from './pages/Services/Branding/CorporateBranding'
-import PersonalBranding from './pages/Services/Branding/PersonalBranding'
-import ReBranding from './pages/Services/Branding/ReBranding'
+const CorporateBranding = lazy(() => import('./pages/Services/Branding/CorporateBranding'))
+const PersonalBranding = lazy(() => import('./pages/Services/Branding/PersonalBranding'))
+const ReBranding = lazy(() => import('./pages/Services/Branding/ReBranding'))
 
 // 🔹 Services → Design
-import GraphicDesign from './pages/Services/Design/GraphicDesign'
-import UiUxDesign from './pages/Services/Design/UI_UX_Design'
+const GraphicDesign = lazy(() => import('./pages/Services/Design/GraphicDesign'))
+const UiUxDesign = lazy(() => import('./pages/Services/Design/UI_UX_Design'))
 
 // 🔹 Services → Organic Growth (SEO)
-import SeoEcommerce from './pages/Services/Organic Growth/SEO_Ecommerce'
-import SeoGarments from './pages/Services/Organic Growth/SEO_Garments'
-import SeoLocal from './pages/Services/Organic Growth/SEO_Local'
-import SeoProfessional from './pages/Services/Organic Growth/SEO_Professional'
-import SeoTravelAgents from './pages/Services/Organic Growth/SEO_TravelAgents'
+const SeoEcommerce = lazy(() => import('./pages/Services/Organic Growth/SEO_Ecommerce'))
+const SeoGarments = lazy(() => import('./pages/Services/Organic Growth/SEO_Garments'))
+const SeoLocal = lazy(() => import('./pages/Services/Organic Growth/SEO_Local'))
+const SeoProfessional = lazy(() => import('./pages/Services/Organic Growth/SEO_Professional'))
+const SeoTravelAgents = lazy(() => import('./pages/Services/Organic Growth/SEO_TravelAgents'))
 
 // 🔹 Services → Others
-import PrAgency from './pages/Services/Others/PRAgency'
-import VideoProduction from './pages/Services/Others/VideoProduction'
+const PrAgency = lazy(() => import('./pages/Services/Others/PRAgency'))
+const VideoProduction = lazy(() => import('./pages/Services/Others/VideoProduction'))
 
 // 🔹 Services → SMM
-import SocialMediaMarketing from './pages/Services/SMM/SocialMediaMarketing'
+const SocialMediaMarketing = lazy(() => import('./pages/Services/SMM/SocialMediaMarketing'))
 
 // 🔹 Services → Software
-import GymManagementSystem from './pages/Services/Software/GymManagementSystem'
-import RestaurantManagementSystem from './pages/Services/Software/RestaurantManagementSystem'
-import RiceMillManagementSystem from './pages/Services/Software/RiceMillManagementSystem'
+const GymManagementSystem = lazy(() => import('./pages/Services/Software/GymManagementSystem'))
+const RestaurantManagementSystem = lazy(() => import('./pages/Services/Software/RestaurantManagementSystem'))
+const RiceMillManagementSystem = lazy(() => import('./pages/Services/Software/RiceMillManagementSystem'))
 
 // 🔹 Services → Website & Content
-import WebDesignAndDevelopment from './pages/Services/Website and Content/WebDesignAndDevelopment'
-import EcommerceWebsite from './pages/Services/Website and Content/EcommerceWebsite'
-import WebsiteMaintenance from './pages/Services/Website and Content/WebsiteMaintenance'
-import CustomWebApplicationDevelopment from './pages/Services/Website and Content/CustomWebApplicationDevelopment'
+const WebDesignAndDevelopment = lazy(() => import('./pages/Services/Website and Content/WebDesignAndDevelopment'))
+const EcommerceWebsite = lazy(() => import('./pages/Services/Website and Content/EcommerceWebsite'))
+const WebsiteMaintenance = lazy(() => import('./pages/Services/Website and Content/WebsiteMaintenance'))
+const CustomWebApplicationDevelopment = lazy(() => import('./pages/Services/Website and Content/CustomWebApplicationDevelopment'))
 
 // Slider CSS
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Team from './pages/Services/Team'
+const Team = lazy(() => import('./pages/Services/Team'))
 
 const router = createBrowserRouter([
   {
@@ -122,9 +122,7 @@ const router = createBrowserRouter([
       { path: 'seo-local', element: <SeoLocal /> },
       { path: 'seo-professional', element: <SeoProfessional /> },
       { path: 'seo-travel', element: <SeoTravelAgents /> },
-       { path: 'team', element: <Team /> },
-
-
+      { path: 'team', element: <Team /> },
 
       // 🔹 Services → SMM
       { path: 'social-media-marketing', element: <SocialMediaMarketing /> },
@@ -139,3 +137,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </HelmetProvider>
   </React.StrictMode>
 )
+

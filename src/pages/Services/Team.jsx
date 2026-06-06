@@ -1,6 +1,7 @@
 import React from 'react';
 import useTeamData from '../../hooks/useTeamData';
 import NoImage from '../../assets/NoImage.png';
+import SEO from '../../components/SEO/SEO';
 
 const Team = () => {
   const { data: teamMembers, loading, error } = useTeamData();
@@ -31,6 +32,14 @@ const Team = () => {
 
   return (
     <section className="bg-gray-light py-20 px-4 min-h-screen">
+      <SEO 
+        title="Our Team | Professional Industry Experts - Data IT"
+        description="Meet the core team of developers, designers, and marketers at Data IT. We deliver technology-driven excellence for global businesses."
+        keywords="Data IT Team, Software Engineers Bangladesh, Digital Marketing Experts, Tech Professionals"
+        url="/team"
+        siteName="Data IT"
+        type="website"
+      />
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">

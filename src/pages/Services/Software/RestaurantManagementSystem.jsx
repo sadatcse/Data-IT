@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const RestaurantManagementSystem = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="Restaurant POS & ERP Management System - Data IT"
+        description="A smart, AI-powered restaurant management software featuring POS billing, recipe ingredient costing, KDS kitchen display, and multi-branch control."
+        keywords="Restaurant POS Software, KDS System, Restaurant Inventory Management, Cafe Billing Software, Restaurant ERP"
+        url="/rms"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Software</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Software</li>
           <li>/</li>
           <li className="font-semibold opacity-100">Restaurant Management System</li>
         </ul>

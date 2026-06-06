@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const RiceMillManagementSystem = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="Rice Mill ERP Management System Software - Data IT"
+        description="Optimize paddy procurement, moisture refraction deductions, weighbridge scale integration, batch production yields, and Sardar labor payrolls in Bangladesh."
+        keywords="Rice Mill ERP, Chatal Mill Software, Weighbridge Software, Rice Mill Billing, Sardar Payroll, Inventory Management Mill"
+        url="/ricemms"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Software</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Software</li>
           <li>/</li>
           <li className="font-semibold opacity-100">Rice Mill Management System</li>
         </ul>

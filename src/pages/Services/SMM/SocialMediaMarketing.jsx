@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const SocialMediaMarketing = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="Social Media Marketing (SMM) Services - Data IT"
+        description="Grow your brand presence and run paid campaigns. Data IT provides expert Facebook, Instagram, and LinkedIn social media marketing."
+        keywords="Social Media Marketing, SMM Services, Paid Facebook Ads, LinkedIn B2B Leads, Instagram Content Creation"
+        url="/social-media-marketing"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Digital Marketing</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Digital Marketing</li>
           <li>/</li>
           <li className="font-semibold opacity-100">Social Media Marketing</li>
         </ul>

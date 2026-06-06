@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const UI_UX_Design = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="UI/UX Design Services - Data IT"
+        description="Design intuitive and user-centered interfaces. Data IT creates responsive, modern web and mobile designs using standard systems."
+        keywords="UI UX Design, User Experience, User Interface Design, Figma Prototypes, Mobile App Design"
+        url="/ui-ux"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Services</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
           <li className="font-semibold opacity-100">UI/UX Design</li>
         </ul>

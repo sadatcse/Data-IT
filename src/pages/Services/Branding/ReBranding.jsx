@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const ReBranding = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="Rebranding Services - Data IT"
+        description="Reposition and refresh your business brand. Data IT specializes in strategic corporate rebranding, audits, logo redesigns, and identity transition."
+        keywords="Rebranding Services, Repositioning Strategy, Brand Audit, Logo Redesign, Corporate Identity Refresh"
+        url="/re-branding"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Services</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
           <li className="font-semibold opacity-100">Rebranding</li>
         </ul>

@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const PRAgency = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="PR Agency & Reputation Management Services - Data IT"
+        description="Build brand trust, visibility, and credibility. Data IT provides professional PR outreach, press release writing, and crisis communication."
+        keywords="PR Agency Services, Public Relations, Reputation Management, Press Release Distribution, Brand Credibility"
+        url="/pr-agency"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Services</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
           <li className="font-semibold opacity-100">PR Agency</li>
         </ul>

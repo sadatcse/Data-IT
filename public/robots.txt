@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Prevent crawl of the 404 error page
+Disallow: /404
+
+# Host
+Host: https://datait.com.bd
+
+# Sitemap
+Sitemap: https://datait.com.bd/sitemap.xml

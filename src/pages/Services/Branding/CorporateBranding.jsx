@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const CorporateBranding = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="Corporate Branding Services - Data IT"
+        description="Build a strong, trustworthy, and premium corporate identity. Data IT offers expert corporate branding guidelines, identity design, and market positioning."
+        keywords="Corporate Branding, Brand Identity Design, Corporate Logo Design, Brand Guidelines, Business Strategy Bangladesh"
+        url="/corporate-branding"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Services</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Services</li>
           <li>/</li>
           <li className="font-semibold opacity-100">Corporate Branding</li>
         </ul>

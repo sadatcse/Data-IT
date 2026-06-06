@@ -1,16 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../../components/SEO/SEO';
 
 const GymManagementSystem = () => {
   return (
     <div className="font-sans text-[#25252B] bg-white min-h-screen">
+      <SEO 
+        title="Gym Management System ERP Software - Data IT"
+        description="Automate gym membership renewals, biometric attendance, locker allocations, and fitness charts. Manage multi-branch gym operations in Bangladesh."
+        keywords="Gym Management Software, Fitness ERP, Locker Management System, Gym Billing Software, Multi Branch Gym"
+        url="/gms"
+        siteName="Data IT"
+        type="website"
+      />
 
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 py-6 text-sm">
         <ul className="flex flex-wrap gap-2 text-[#1A356A] opacity-70">
-          <li><a href="#" className="hover:text-[#056FFD]">Home</a></li>
+          <li><Link to="/" className="hover:text-[#056FFD]">Home</Link></li>
           <li>/</li>
-          <li><a href="#" className="hover:text-[#056FFD]">Software</a></li>
+          <li className="hover:text-[#056FFD] cursor-default">Software</li>
           <li>/</li>
           <li className="font-semibold opacity-100">Gym Management System</li>
         </ul>

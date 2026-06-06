@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'; 
-import { motion, AnimatePresence } from 'framer-motion'; 
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'; 
 import Logo from '../../assets/Logo.png'; 
+
+// ... (NAV_ITEMS and other components remain same)
 
 const NAV_ITEMS = [
     { title: "Home", path: "/" },
@@ -94,7 +96,7 @@ const DesktopSubItem = ({ item }) => {
                 {/* Nested Flyout */}
                 <div className="hidden group-hover:block absolute left-full top-0 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-20">
                     <ul className="py-1">
-                        {item.subItems.map((sub) => <DesktopSubItem key={sub.path || sub.title} item={sub} />)}
+                        {item.subItems.map((sub, index) => <DesktopSubItem key={`${sub.path || sub.title}-${index}`} item={sub} />)}
                     </ul>
                 </div>
             </li>
@@ -140,8 +142,8 @@ const DesktopDropdown = ({ item }) => {
                         className="absolute left-0 mt-0 w-64 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-30 py-2"
                     >
                         <ul>
-                            {item.subItems.map((subItem) => (
-                                <DesktopSubItem key={subItem.path || subItem.title} item={subItem} />
+                            {item.subItems.map((subItem, index) => (
+                                <DesktopSubItem key={`${subItem.path || subItem.title}-${index}`} item={subItem} />
                             ))}
                         </ul>
                     </motion.div>
@@ -235,6 +237,12 @@ const MobileNavItem = ({ item, closeMenu, level = 0 }) => {
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     // Lock body scroll when mobile menu is open
     useEffect(() => {
@@ -250,6 +258,11 @@ const Header = () => {
     return (
         <>
             <header className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 shadow-lg backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
+                {/* Scroll Progress Bar */}
+                <motion.div
+                    className="absolute bottom-0 left-0 right-0 h-1 bg-sky-500 origin-left z-50"
+                    style={{ scaleX }}
+                />
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-20">
                         
@@ -263,10 +276,10 @@ const Header = () => {
                         {/* Desktop Nav */}
                         <nav className="hidden lg:flex">
                             <ul className="flex items-center space-x-6">
-                                {NAV_ITEMS.map((item) => (
+                                {NAV_ITEMS.map((item, index) => (
                                     item.subItems ? 
-                                    <DesktopDropdown key={item.title} item={item} /> : 
-                                    <DesktopNavItem key={item.path} item={item} />
+                                    <DesktopDropdown key={`${item.title}-${index}`} item={item} /> : 
+                                    <DesktopNavItem key={`${item.path}-${index}`} item={item} />
                                 ))}
                             </ul>
                         </nav>

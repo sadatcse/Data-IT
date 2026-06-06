@@ -7,59 +7,44 @@ import { motion } from 'framer-motion'; // Import Motion
 
 // --- Animation Variants ---
 
-// Text content sliding in from the left
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1, 
-    transition: { 
-      staggerChildren: 0.2, // Stagger text elements
-      delayChildren: 0.3 
-    } 
+// Floating animation for cards
+const floatingAnimation = {
+  y: [0, -10, 0],
+  transition: {
+    duration: 3,
+    repeat: Infinity,
+    ease: "easeInOut"
   }
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, x: -30 },
+const revealVariant = {
+  hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 
-    x: 0, 
+    y: 0, 
     transition: { duration: 0.6, ease: "easeOut" } 
   }
 };
 
-// Cards sliding up from the bottom with stagger
-const cardContainerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.8 // Wait for hero text to finish
-    }
-  }
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5, ease: "easeOut" } 
-  }
-};
-
 // --- Helper Component: FeatureCard ---
-const FeatureCard = ({ icon: Icon, title, description }) => (
+const FeatureCard = ({ icon: Icon, title, description, index }) => (
   <motion.div 
-    variants={cardVariants}
-    whileHover={{ y: -5, transition: { duration: 0.2 } }}
-    className="bg-white p-6 shadow-xl rounded-lg flex flex-col items-center text-center z-20 h-full border-b-4 border-transparent hover:border-primary transition-all duration-300"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={revealVariant}
+    transition={{ delay: index * 0.1 }}
+    whileHover={{ y: -15, transition: { duration: 0.3 } }}
+    className="bg-white p-8 shadow-2xl rounded-2xl flex flex-col items-center text-center z-20 h-full border border-gray-100 hover:border-primary/30 transition-all duration-300 group"
   >
-    <div className="text-primary mb-3">
+    <motion.div 
+      animate={floatingAnimation}
+      transition={{ delay: index * 0.2 }}
+      className="bg-sky-50 p-4 rounded-xl text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+    >
       <Icon className="w-8 h-8" /> 
-    </div>
-    <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+    </motion.div>
+    <h3 className="text-xl font-bold text-gray-900 mb-3">
       {title}
     </h3>
     <p className="text-sm text-gray-600 leading-relaxed">
@@ -70,48 +55,44 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 
 // --- Helper Component: HeroContent ---
 const HeroContent = () => (
-  <motion.div 
-    variants={containerVariants}
-    initial="hidden"
-    animate="visible"
-    className="relative z-10 w-full max-w-4xl px-4 sm:px-6 lg:px-8 flex flex-col justify-center h-full pb-10 md:pb-0"
-  >
-    {/* Main Title */}
+  <div className="relative z-10 w-full max-w-4xl px-4 sm:px-6 lg:px-8 flex flex-col justify-center h-full pb-10 md:pb-0">
     <motion.h1 
-      variants={itemVariants}
-      className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-black tracking-tight leading-tight mb-4 md:mb-6 drop-shadow-sm"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-black tracking-tight leading-tight mb-4 md:mb-6 drop-shadow-sm"
     >
       Digital Solutions for <br /> 
       <span className="text-primary">Business Growth</span>
     </motion.h1>
-    
-    {/* Subtitle */}
     <motion.p 
-      variants={itemVariants}
-      className="text-base sm:text-lg md:text-xl text-gray-800 font-medium mb-6 md:mb-8 max-w-lg leading-relaxed"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+      className="text-lg sm:text-xl md:text-2xl text-gray-800 font-medium mb-8 md:mb-10 max-w-xl leading-relaxed"
     >
       We work for your data and help improve your business with tailored strategies and expert insights.
     </motion.p>
-    
-    {/* CTA Button */}
     <motion.div 
-      variants={itemVariants}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
       className="flex flex-col sm:flex-row gap-4"
     >
-      <Link 
-        to="/contact" 
-      >
+      <Link to="/contact" className="w-full sm:w-auto">
         <motion.button 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="btn btn-primary bg-primary hover:bg-sky-600 border-none text-white shadow-lg shadow-sky-500/30 normal-case text-base px-8 h-12 min-h-0 rounded-md flex items-center justify-center w-full sm:w-auto"
+          className="btn btn-primary bg-primary hover:bg-sky-600 border-none text-white shadow-xl shadow-sky-500/20 normal-case text-lg px-10 h-14 min-h-0 rounded-xl flex items-center justify-center w-full"
         >
           Request Consultation
         </motion.button>
       </Link>
     </motion.div>
-  </motion.div>
+  </div>
 );
+
+
 
 // --- Main Component: Hero ---
 const Hero = () => {
@@ -161,21 +142,17 @@ const Hero = () => {
       {/* 3. Feature Cards Wrapper (Animated) */}
       <div className="relative px-4 sm:px-6 lg:px-8 -mt-20 md:absolute md:-bottom-16 md:left-0 md:right-0 z-20">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
-            variants={cardContainerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {featureData.map((feature, index) => (
               <FeatureCard 
                 key={index}
+                index={index}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
               />
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
       
